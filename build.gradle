@@ -77,6 +77,11 @@ model {
             wpi.cpp.deps.wpilib(it)
         }
     }
+    toolChains {
+        visualCpp(VisualCpp) {
+            installDir 'C:/Program Files/Microsoft Visual Studio/2022/Preview' // << VS install directory
+        }
+    }
     testSuites {
         frcUserProgramTest(GoogleTestTestSuiteSpec) {
             testing $.components.frcUserProgram
